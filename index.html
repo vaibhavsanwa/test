@@ -236,6 +236,18 @@ body,.btn,.btt,.nav-links a,.contact-pill{cursor:auto}
 .hero-btns{flex-direction:column}
 .hero-btns .btn{width:100%;justify-content:center}
 }
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px;
+}
 </style>
 </head>
 <body>
@@ -356,7 +368,7 @@ body,.btn,.btt,.nav-links a,.contact-pill{cursor:auto}
 <div class="divider"></div>
 
 <!-- ════════ HALL OF FAME ════════ -->
-<section id="achievements" class="hof-section">
+<section id="achievements" class="hof-section" style="background: linear-gradient(180deg, var(--bg-primary), rgba(0,10,30,0.98), var(--bg-primary)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80') center/cover no-repeat fixed;">
   <div class="container">
     <div class="hof-header">
       <div class="section-tag reveal">// 03 — RECOGNITION</div>
@@ -596,7 +608,7 @@ body,.btn,.btt,.nav-links a,.contact-pill{cursor:auto}
 <div class="divider"></div>
 
 <!-- ════════ CONTACT ════════ -->
-<section id="contact" class="contact">
+<section id="contact" class="contact" style="background: radial-gradient(ellipse at center, rgba(0,229,255,0.04) 0%, transparent 70%), var(--bg-secondary);">
   <div class="container">
     <div class="section-tag reveal">// 07 — CONTACT</div>
     <h2 class="section-title reveal" style="text-align:center">Let's Connect</h2>
